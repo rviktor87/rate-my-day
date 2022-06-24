@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -r dotenv/config index.js"
+    "start": "nodemon --exec babel-node -r dotenv/config index.js",
+    "migrate": "sequelize-cli db:migrate"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +20,11 @@
   },
   "type": "module",
   "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/node": "^7.18.5",
     "@types/node": "^18.0.0",
+    "babel-register": "^6.26.0",
     "nodemon": "^2.0.16",
     "sequelize-cli": "^6.4.1"
   }
