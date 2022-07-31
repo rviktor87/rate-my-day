@@ -6,7 +6,7 @@
     "test": "jest",
     "test:ci": "jest --ci --collectCoverage --reporters=default",
     "test:cover": "jest --collectCoverage",
-    "start": "nodemon --exec babel-node -r ./node_modules/dotenv/config src/index.js",
+    "dev": "nodemon --exec babel-node -r ./node_modules/dotenv/config src/index.js",
     "build": "babel src -d dist",
     "loadData": "babel-node -r ./node_modules/dotenv/config src/loadData.js",
     "serve": "node -r dotenv/config dist/index.js"
